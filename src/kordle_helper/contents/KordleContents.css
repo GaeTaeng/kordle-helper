@@ -1,12 +1,15 @@
+.section {
+    width : 70%;
+    margin:40px auto;
+}
 .answerInputContainer {
     display : flex;
-    width : 70%;
-    gap: 1;
-    margin:0 auto;
     
+    gap: 1px;
 }
 .answerInputContainer .answerInputCase {
     width: calc(100%/12);
+    min-width: 40px;
 }
 
 .answerInputContainer .answerInputCase .answerInputIdx{
@@ -16,14 +19,14 @@
 }
 
 .answerInputContainer .answerInputCase .answerInput {
-    width: calc(100% - 10px) ;
-    min-height: 50px;
-     /* height:80px; */
-     font-size:25px;
-     font-weight: 900;
-     border:3px solid #94c37d;
-     background-color: #d9ead3;
-     text-align:center;
+    width: calc(100% - 5px) ;
+    min-height: 40px;
+    /* height:80px; */
+    font-size:25px;
+    font-weight: 900;
+    border:0.1px solid #20630b;
+    background-color: #d9ead3;
+    text-align:center;
 }
 
 .answerInput::after {
@@ -31,19 +34,18 @@
 }
 
 .exampleListContainer {
-    
     display : flex;
-    width : 70%;
     min-height: 488px;
-    margin:20px auto;
     gap: 1px;
 }
 
 .exampleListCase {
     width: calc(100%/12);
+    min-width: 40px;
 }
 .exmapleItem {
-    width: 100%;
+    width: calc(100% - 1px) ;
+    
     min-height: 20px;
     font-size: 15px;
     font-weight: 1000;
@@ -51,4 +53,44 @@
     border: 0.1px solid black;
     text-align: center;
     vertical-align: middle;
+
+    cursor: pointer;
+}
+
+
+
+
+.warningListContainer {
+    display : flex;
+    min-height: 488px;
+    gap: 1px;
+}
+
+.warningListCase {
+    width: calc(100%/12);
+    min-width: 40px;
+}
+
+.warningItemInput {
+    width: calc(100% - 5px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+.warningItem {
+    width: calc(100% - 1px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    background-color: #f1c232;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
 }
