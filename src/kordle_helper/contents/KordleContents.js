@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./KordleContents.css"
+import { GAME_TYPE } from "./kordleConst";
 const init_1 = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"]
 const init = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ", "ㅏ", "ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ", "ㅜ", "ㅠ", "ㅡ", "ㅣ"];
 const init_empt = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ];
-function KordleContents(params) {
-    const [answerList, setAnswerList] = useState(["","","","","","","","","","","","",]);
-    const [exampleList, setExampleList] = useState([init_1,init,init,init,init,init,init,init,init,init,init,init])
+function KordleContents({type}) {
+    const [answerList, setAnswerList] = useState( ["","","","","","","","","","","","",]);
+    const [exampleList, setExampleList] = useState([init_1,init,init,init,init,init,init,init,init,init,init,init] )
     const [warningList, setWarningList] = useState([["",],["",],["",],["",],["",],["",],["",],["",],["",],["",],["",],["",]]);
     
 
+    useEffect(() => {
+        console.log("type : ", type)
+        if(String(type) === String(GAME_TYPE.KORDLE)) {
+            setAnswerList(["","","","","","",])
+            setExampleList([init_1,init,init,init,init,init,])
+            setWarningList([["",],["",],["",],["",],["",],["",],])
+        }else if(String(type) === String(GAME_TYPE.KOOOOOODLE)) {
+            setAnswerList(["","","","","","","","","","","","",])
+            setExampleList([init_1,init,init,init,init,init,init,init,init,init,init,init,])
+            setWarningList([["",],["",],["",],["",],["",],["",],["",],["",],["",],["",],["",],["",],])
 
+        }
+    }, [type])
     const englishToKoreanMap = {
         'a': 'ㅁ', 's': 'ㄴ', 'd': 'ㅇ', 'f': 'ㄹ', 'g': 'ㅎ', 'h': 'ㅗ', 'j': 'ㅓ', 'k': 'ㅏ', 'l': 'ㅣ',
         'q': 'ㅂ', 'w': 'ㅈ', 'e': 'ㄷ', 'r': 'ㄱ', 't': 'ㅅ', 'y': 'ㅛ', 'u': 'ㅕ', 'i': 'ㅑ', 'o': 'ㅐ', 'p': 'ㅔ',
@@ -39,8 +52,6 @@ function KordleContents(params) {
             }
         }
 
-
-        console.log("text : ", text)
         setAnswerList(answerList.map((item, _idx) => {
             if(_idx === idx) return text;
             return item;
@@ -102,6 +113,7 @@ function KordleContents(params) {
         }))
 
     }
+    console.log("Answer : ", answerList)
     return (
         <div>
             <div className="section">

@@ -7,6 +7,14 @@
     
     gap: 1px;
 }
+
+.kordle
+.answerInputContainer .answerInputCase {
+    width: calc(100%/6);
+    min-width: 40px;
+}
+
+.kooooodle
 .answerInputContainer .answerInputCase {
     width: calc(100%/12);
     min-width: 40px;
@@ -39,10 +47,18 @@
     gap: 1px;
 }
 
+.kordle
+.exampleListCase {
+    width: calc(100%/6);
+    min-width: 40px;
+}
+
+.kooooodle
 .exampleListCase {
     width: calc(100%/12);
     min-width: 40px;
 }
+
 .exmapleItem {
     width: calc(100% - 1px) ;
     
@@ -66,6 +82,13 @@
     gap: 1px;
 }
 
+.kordle
+.warningListCase {
+    width: calc(100%/6);
+    min-width: 40px;
+}
+
+.kooooodle
 .warningListCase {
     width: calc(100%/12);
     min-width: 40px;
