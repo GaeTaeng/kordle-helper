@@ -74,14 +74,31 @@ function KordleContents({type}) {
     }
 
     const handleKeyDownWarningInput = (e, idx) => {
-        if( e.keyCode === 13) {
+        
+        if( e.keyCode === 13 ) {
+            handleInputWarning(e.target.value, idx)
+            e.target.value= ""
+        }
+
+    }
+
+    const handleBlurWarningInput = (e, idx) => {
+        console.log("e : ", e)
+        if(  e.type === 'blur') {
             handleInputWarning(e.target.value, idx)
             e.target.value= ""
         }
 
     }
     const handleInputWarning = (text, idx) => {
-        if(warningList.includes(text)) return;
+        
+        if(text.length > 1) return;
+        if(answerList[idx]) return;
+
+        text = replaceExceptKorean(convertEnglishToKorean(text))
+        if(warningList[idx].includes(text)) return;
+        
+        
         setWarningList(warningList.map((warning, _idx) => {
             if(_idx === idx) {
                 return [...warning.filter(item => item !== ""), text]
@@ -151,7 +168,7 @@ function KordleContents({type}) {
                 
                     {warningList.map((warning, idx) => {
                             return <div key={`warningListCase_${idx}`} className="warningListCase">
-                                <input key={`warningItem_${idx}`} className="warningItemInput" onKeyDown={(e) => {handleKeyDownWarningInput(e, idx)}}/>
+                                <input key={`warningItem_${idx}`} className="warningItemInput" onKeyDown={(e) => {handleKeyDownWarningInput(e, idx)}} onBlur={(e) => {handleBlurWarningInput(e, idx)}}/>
                                     {warning.map((item, idx2) => {
                                         return <div key={`warningItem_${idx2}`} className="warningItem" onClick={() => {handleDeleteWarningItem(idx, idx2)}}>
                                                 {item}
