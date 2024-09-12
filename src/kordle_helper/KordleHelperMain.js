@@ -9,6 +9,7 @@ function KordleHelperMain(params) {
         <LnbMenu />
         <Contents />
         
+
         </div>) 
 }
 
