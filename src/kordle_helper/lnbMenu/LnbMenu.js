@@ -14,7 +14,7 @@ function LnbMenu(params) {
     const handleClickLink = () => {
         setIsOpenLinks(!isOpenLinks);
     }
-    return (<div id="lnb">
+    return (<nav id="lnb">
         <h1 onClick={handleClickLink} style={{cursor:"pointer"}}>게임 링크 모음</h1>
         <ul style={isOpenLinks ? {display:"block"} : {display:"none"}}>
             {menu.map(item => {
@@ -23,7 +23,7 @@ function LnbMenu(params) {
           
           
         </ul>
-      </div>) 
+      </nav>) 
 }
 
 export default LnbMenu;
