@@ -46,7 +46,7 @@ function KordleContents({type}) {
         }else {
             if(answerList[idx]) return;
             text = replaceExceptKorean(convertEnglishToKorean(e.key))
-            const next_idx = idx <= 10 ? idx+1 : null;
+            const next_idx = idx <= (type === GAME_TYPE.KOOOOOODLE ? 10 : 4) ? idx+1 : null;
             if(next_idx) {
                 document.getElementById(`answerInput_${next_idx}`).focus();
             }
