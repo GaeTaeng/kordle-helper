@@ -1,23 +1,33 @@
+.leftContents {
+    display: inline-block;
+    margin:0px auto;
+
+}
+.rightContents {
+    display: inline-block;
+
+}
 .section {
-    width : 70%;
-    margin:40px auto;
+    margin-top: 40px;
+}
+.word {
+    width: 50px;
+
 }
 .answerInputContainer {
-    display : flex;
+    display : inline-flex;
     
     gap: 1px;
 }
 
 .kordle
 .answerInputContainer .answerInputCase {
-    width: calc(100%/6);
-    min-width: 40px;
+    
 }
 
 .kooooodle
 .answerInputContainer .answerInputCase {
-    width: calc(100%/12);
-    min-width: 40px;
+    
 }
 
 .answerInputContainer .answerInputCase .answerInputIdx{
@@ -42,21 +52,19 @@
 }
 
 .exampleListContainer {
-    display : flex;
-    min-height: 488px;
+    
+    display : inline-flex;
     gap: 1px;
 }
 
 .kordle
 .exampleListCase {
-    width: calc(100%/6);
-    min-width: 40px;
+    
 }
 
 .kooooodle
 .exampleListCase {
-    width: calc(100%/12);
-    min-width: 40px;
+    
 }
 
 .exmapleItem {
@@ -77,21 +85,20 @@
 
 
 .warningListContainer {
-    display : flex;
-    min-height: 488px;
+    
+    display : inline-flex;
+    /* min-height: 488px; */
     gap: 1px;
 }
 
 .kordle
 .warningListCase {
-    width: calc(100%/6);
-    min-width: 40px;
+    
 }
 
 .kooooodle
 .warningListCase {
-    width: calc(100%/12);
-    min-width: 40px;
+    
 }
 
 .warningItemInput {
@@ -111,6 +118,41 @@
     font-size: 15px;
     font-weight: 1000;
     background-color: #f1c232;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+}
+
+
+
+.notUseListContainer {
+    display : inline-flex;
+    gap: 1px;
+}
+
+.notUseListCase {
+    
+}
+
+.notUseItemInput {
+    width: calc(100% - 5px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+.notUseItem {
+    width: calc(100% - 1px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    background-color: grey;
     border: 0.1px solid black;
     text-align: center;
     vertical-align: middle;
