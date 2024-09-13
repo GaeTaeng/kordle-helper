@@ -10,9 +10,13 @@
 .section {
     margin-top: 40px;
 }
+.kordle
 .word {
     width: 50px;
-
+}
+.kooooodle
+.word {
+    width: 30px;
 }
 .answerInputContainer {
     display : inline-flex;
