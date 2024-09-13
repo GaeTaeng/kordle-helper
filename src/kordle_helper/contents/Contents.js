@@ -11,7 +11,6 @@ function Contents(params) {
         setType(e.target.value)
     }
 
-    console.log("TYPE : ", type)
     return(
         <div className={String(type) === String(GAME_TYPE.KORDLE) ? "kordle" : "kooooodle"}>
             <KordleHeader type={type} onSelect = {handleSelect}/>

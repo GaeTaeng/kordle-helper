@@ -15,7 +15,7 @@ function KordleContents({type}) {
 
     const [isOpenNotice, setIsOpenNotice] = useState(true)
     useEffect(() => {
-        console.log("type : ", type)
+
         if(String(type) === String(GAME_TYPE.KORDLE)) {
             setAnswerList(["","","","","","",])
             setExampleList([init_1,init,init,init,init,init,])
@@ -87,7 +87,7 @@ function KordleContents({type}) {
     }
 
     const handleBlurWarningInput = (e, idx) => {
-        console.log("e : ", e)
+
         if(  e.type === 'blur') {
             handleInputWarning(e.target.value, idx)
             e.target.value= ""
@@ -147,7 +147,7 @@ function KordleContents({type}) {
     }
 
     const handleBlurNotUseInput = (e, idx) => {
-        console.log("e : ", e)
+        
         if(  e.type === 'blur') {
             handleInputNotUse(e.target.value, idx)
             e.target.value= ""
@@ -194,7 +194,7 @@ function KordleContents({type}) {
         }))
 
     }
-    console.log("Answer : ", answerList)
+
 
     const handleCloseNoticePopup = () => {
         setIsOpenNotice(false);
@@ -204,6 +204,7 @@ function KordleContents({type}) {
             <KordleNoticePopup isOpenNotice={isOpenNotice} handleCloseNoticePopup={handleCloseNoticePopup}/>
             <div className="leftContents">
                 <div className="section">
+                <div className="hintText" ><strong>설명 | </strong>문제를 풀면서 발견한 단어(정답)을 적는 칸입니다. 클릭하여 제거할 수 있습니다.</div>    
                     <div className="answerInputContainer" >
                         {answerList.map((item, idx) => {
                             return <div key={`answerInputCase_${idx}` } className="answerInputCase word">
@@ -217,6 +218,8 @@ function KordleContents({type}) {
 
 
                 <div className="section">
+                    
+                <div className="hintText" ><strong>설명 | </strong>각 칸별로 들어갈 수 있는 잔여 자/모음이 나열되어있습니다. 클릭하여 확정칸으로 이동이 가능합니다.</div>    
                     <div className="exampleListContainer">
 
                     {exampleList.map((example, idx) => {
@@ -235,10 +238,10 @@ function KordleContents({type}) {
                 <div className="section">
                     <div>흰색 영역에 입력 후 엔터</div> 
                     <div>(해당칸에서는 사용하지 않지만 다른칸에서 사용하는 단어)</div>
+                    <div className="hintText" ><strong>설명 | </strong>정답에 포함이되긴하지만 해당칸이 아닌 다른 칸의 정답을 입력해줍니다. <strong>각 칸에 맞춰서 입력해주어야합니다.</strong></div>    
                     <div className="warningListContainer">
                     
                         {warningList.map((warning, idx) => {
-                                    console.log("warning : ", warning)
                                 return <div key={`warningListCase_${idx}`} className="warningListCase word">
                                     <input key={`warningItem_${idx}`} className="warningItemInput" onKeyDown={(e) => {handleKeyDownWarningInput(e, idx)}} onBlur={(e) => {handleBlurWarningInput(e, idx)}}/>
                                         {warning.map((item, idx2) => {
@@ -257,10 +260,11 @@ function KordleContents({type}) {
                 <div className="section">
                     <div>흰색 영역에 입력 후 엔터</div> 
                     <div>(더이상 사용하지 않을 자음/모음들을 입력)</div>
+
+                <div className="hintText" ><strong>설명 | </strong> 더이상 사용하지않는 또는 최대로 사용한 자/모들을 입력하시면 중앙 예시영역에 나타나지않게됩니다.</div>    
                     <div className="notUseListContainer">
                     
                         {notUseList.map((notUse, idx) => {
-                            console.log("notUse : ", notUse)
                                 return <div key={`notUseListCase_${idx}`} className="notUseListCase word">
                                     <input key={`notUseItem_${idx}`} className="notUseItemInput" onKeyDown={(e) => {handleKeyDownNotUseInput(e, idx)}} onBlur={(e) => {handleBlurNotUseInput(e, idx)}}/>
                                         {notUse.map((item, idx2) => {

@@ -10,6 +10,8 @@
 .section {
     margin-top: 40px;
 }
+
+
 .kordle
 .word {
     width: 50px;
@@ -18,11 +20,30 @@
 .word {
     width: 25px;
 }
+
 .answerInputContainer {
     display : inline-flex;
     
     gap: 1px;
 }
+
+.hintText {
+    display: none;
+}
+.hint
+.hintText {
+    display: block;
+}
+
+
+.hint
+.answerInputContainer {
+
+    padding : 20px;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
 
 .kordle
 .answerInputContainer .answerInputCase {
@@ -61,6 +82,14 @@
     gap: 1px;
 }
 
+.hint
+.exampleListContainer {
+    padding : 40px;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+
 .kordle
 .exampleListCase {
     
@@ -94,6 +123,13 @@
     /* min-height: 488px; */
     gap: 1px;
 }
+
+.hint
+.warningListContainer {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
 
 .kordle
 .warningListCase {
@@ -134,6 +170,11 @@
 .notUseListContainer {
     display : inline-flex;
     gap: 1px;
+}
+.hint
+.notUseListContainer {
+    border: 3px solid red;
+    border-radius: 5px;
 }
 
 .notUseListCase {
