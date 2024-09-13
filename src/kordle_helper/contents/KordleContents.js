@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./KordleContents.css"
-import "./popup.css"
+
 import { GAME_TYPE } from "./kordleConst";
 import KordleNoticePopup from "./KordleNoticePopup";
 const init_1 = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"]
