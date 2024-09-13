@@ -1,10 +1,26 @@
+.kordleContents {
+    /* width: 1000px; */
+
+}
 .leftContents {
-    display: inline-block;
-    margin:0px auto;
+    
+    /* float: right; */
+    /* flex: 6; */
+    /* width: 60%; */
+    /* display: inline-block; */
+    margin-left: 50px;
+    float: left;
+    box-sizing: border-box;
 
 }
 .rightContents {
-    display: inline-block;
+    float: left;
+    /* flex: 1; */
+    margin-right : 50px;
+    /* width: 20%; */
+    /* display: inline-block; */
+    box-sizing: border-box;
+    
 
 }
 .section {
