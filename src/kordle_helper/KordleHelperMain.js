@@ -5,7 +5,7 @@ import LnbMenu from './lnbMenu/LnbMenu';
 
 function KordleHelperMain(params) {
 
-    const [isOnHint, setIsOnHint] = useState(true)
+    const [isOnHint, setIsOnHint] = useState(false)
 
     const handleToggleOnHint = () => {
         setIsOnHint(!isOnHint)

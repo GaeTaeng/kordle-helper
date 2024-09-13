@@ -16,7 +16,7 @@
 .rightContents {
     float: left;
     /* flex: 1; */
-    margin-right : 50px;
+    margin-left: 50px;
     /* width: 20%; */
     /* display: inline-block; */
     box-sizing: border-box;
@@ -45,10 +45,14 @@
 
 .hintText {
     display: none;
+    font-size: small;
+    font-weight: 900;
+    margin : 10px 0px;
 }
 .hint
 .hintText {
     display: block;
+    
 }
 
 
