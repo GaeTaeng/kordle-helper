@@ -7,8 +7,8 @@ function LnbMenu(params) {
         {title : "꼬들", link : "https://kordle.kr/"},
         {title : "꼬오오오오들", link : "https://koooo.kordle.kr/"},
         {title : "개탱-티스토리", link : "https://gaetaeng.tistory.com/"},
-        {title : "[예정](놀자)가위바위보", link : ""},
-        {title : "[예정](놀자)끝말잇기", link : ""},
+        // {title : "[예정](놀자)가위바위보", link : ""},
+        // {title : "[예정](놀자)끝말잇기", link : ""},
         
     ]
 

@@ -34,7 +34,8 @@
 }
 .kooooodle
 .word {
-    width: 25px;
+    /* width: 25px; */
+    width: 50px;
 }
 
 .answerInputContainer {
@@ -110,24 +111,32 @@
 }
 
 
-.kordle
 .exampleListCase {
+    display: flex;
+    flex-direction : column;
+    justify-content: space-evenly; 
     
+
 }
 
-.kooooodle
-.exampleListCase {
-    
+.exmapleItemBox {
+    /* background-color: #b7e1cd; */
+    border: 0.1px solid black;
+    border-radius: 5px; 
+    /* margin-bottom: 3px; */
+
 }
 
+.exmapleItemBox:hover {
+    background-color: #b7e1cd;
+
+}
 .exmapleItem {
     width: calc(100% - 1px) ;
-    
+    height: 100%;
     min-height: 20px;
     font-size: 15px;
     font-weight: 1000;
-    background-color: #b7e1cd;
-    border: 0.1px solid black;
     text-align: center;
     vertical-align: middle;
 
