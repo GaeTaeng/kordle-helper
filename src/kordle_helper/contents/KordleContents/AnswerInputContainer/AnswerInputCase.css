@@ -2,7 +2,7 @@
 .answerInputContainer {
     display : inline-flex;
     
-    gap: 1px;
+    gap: 3px;
 }
 
 .hint
@@ -10,29 +10,34 @@
 
     padding : 20px;
     border: 3px solid red;
-    border-radius: 5px;
 }
 
 .answerInputContainer .answerInputCase {
-    border-radius: 5px; 
-    border: 1px solid #20630b;
     
 }
 
 .answerInputContainer .answerInputCase .answerInputIdx{
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
     background-color: black;
     color: white;
 }
 
 .answerInputContainer .answerInputCase .answerInput {
-    width: calc(100% - 5px) ;
+    width: calc(100% ) ;
     min-height: 40px;
     /* height:80px; */
     font-size:25px;
     font-weight: 900;
     background-color: #d9ead3;
     text-align:center;
+    border: 1px solid #20630b;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding : 0px
 }
 
 .answerInput::after {

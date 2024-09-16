@@ -1,6 +1,7 @@
 .kordleContents {
     /* width: 1000px; */
-    margin: 0px auto;
+    margin: 0px auto; 
+    display: flex;
 
 }
 .leftContents {
@@ -25,7 +26,7 @@
 
 }
 .section {
-    margin-top: 40px;
+    margin: 40px 0px;
 }
 
 
@@ -35,7 +36,6 @@
 }
 .kooooodle
 .word {
-    /* width: 25px; */
     width: 50px;
 }
 

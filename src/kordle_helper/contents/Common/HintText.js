@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react';
 
-export function HintText({text}) {
+export function HintText({type, text}) {
   return (
-  <div className="hintText" ><strong>설명 | </strong>{text}</div>    
+  <div className="hintText"  ><strong key={type}>설명 | </strong>{text}</div>    
                    
   );
 };

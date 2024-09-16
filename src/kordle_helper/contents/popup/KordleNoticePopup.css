@@ -11,3 +11,11 @@
 dialog.popup {
     z-index: 1000;
 }
+
+
+.KordleNoticePopup {
+    position: absolute;
+    width: 100%;
+
+    margin: auto auto;
+}

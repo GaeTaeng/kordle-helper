@@ -4,7 +4,7 @@ import "./popup.css"
 function KordleNoticePopup({isOpenNotice, handleCloseNoticePopup}) {
     
     return (
-        <div style={isOpenNotice ? {display:"block"} : {display:"none"}}>
+        <div  className="KordleNoticePopup" style={isOpenNotice ? {display:"block"} : {display:"none"}}>
             {isOpenNotice && <div className="dimmed" />}
             <dialog className="popup" open={isOpenNotice}>
                 <h1>해당 페이지는 꼬들/꼬오오오오들 문제풀이를 도와주는 헬프 페이지입니다.</h1>
@@ -18,8 +18,8 @@ function KordleNoticePopup({isOpenNotice, handleCloseNoticePopup}) {
                 <div>
                     <h2>기타</h2>
                     <h3>사용간 불편한 사항이나 건의사항은 아래 메일 또는 카카오톡 오픈채팅을 통해 전달주시면 감사합니다.</h3>
-                    <p><h3>E-Mail</h3> nuckly60@gmail.com </p>
-                    <p><h3>KAKAO TALK</h3>  <a href="https://open.kakao.com/o/gdYCzqOg"  target='_blank'>카카오톡</a></p>
+                    <h3>E-Mail</h3> nuckly60@gmail.com 
+                    <h3>KAKAO TALK</h3>  <a href="https://open.kakao.com/o/gdYCzqOg"  target='_blank'>카카오톡</a>
                     <br />
 
                 </div>

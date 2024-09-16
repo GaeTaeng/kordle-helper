@@ -8,7 +8,7 @@ function AnswerInputContainer({answerList, answerInit, onChangeAnswerItem}) {
                         {answerList.map((item, idx) => {
                             return <div key={`answerInputCase_${idx}` } className="answerInputCase word">
                                     <div className="answerInputIdx" >{idx}</div>
-                                    <input className="answerInput" id={`answerInput_${idx}`} style={item && item === "" ? {} : {cursor:"pointer"}} pattern="[ㄱ-ㅎ]" onClick={() => answerInit(idx)} onKeyDown={(e, c) => {onChangeAnswerItem(e, c, idx)}} value={item} readOnly={item}/>
+                                    <input className="answerInput" id={`answerInput_${idx}`} style={{cursor:"pointer"}} pattern="[ㄱ-ㅎ]" onClick={() => answerInit(idx)} onKeyDown={(e, c) => {onChangeAnswerItem(e, c, idx)}} value={item} readOnly/>
                                 </div>
                         })}
 

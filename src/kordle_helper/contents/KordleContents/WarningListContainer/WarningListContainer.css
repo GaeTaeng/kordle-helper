@@ -16,6 +16,12 @@
 }
 
 
+.warningListCase {
+    border-radius: 5px; 
+    border: 1px solid #f1c232;
+    
+}
+
 .kordle
 .warningListCase {
     
@@ -32,7 +38,6 @@
     min-height: 20px;
     font-size: 15px;
     font-weight: 1000;
-    border: 0.1px solid black;
     text-align: center;
     vertical-align: middle;
 }
@@ -43,7 +48,7 @@
     font-size: 15px;
     font-weight: 1000;
     background-color: #f1c232;
-    border: 0.1px solid black;
+    border: 1px solid #f1c232;
     text-align: center;
     vertical-align: middle;
 

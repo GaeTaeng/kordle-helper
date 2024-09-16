@@ -13,7 +13,7 @@ function Contents(params) {
     }
 
     return(
-        <div className={String(type) === String(GAME_TYPE.KORDLE) ? "kordle" : "kooooodle"}>
+        <div className={(type) === (GAME_TYPE.KORDLE) ? "kordle" : "kooooodle"}>
             <KordleHeader type={type} onSelect = {handleSelect}/>
             <KordleContents type={type}/>
         </div>

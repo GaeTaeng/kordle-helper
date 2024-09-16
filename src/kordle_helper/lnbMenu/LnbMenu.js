@@ -49,13 +49,13 @@ function LnbMenu(params) {
         </ButtonGroup>
         
         <Popper
-        sx={{ zIndex: 1 }}
-        open={isOpenLinks}
-        anchorEl={anchorRef.current}
-        role={undefined}
-        transition
-        disablePortal
-      >
+            sx={{ zIndex: 1 }}
+            open={isOpenLinks}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            transition
+            disablePortal
+        >
         {({ TransitionProps, placement }) => (
           <Grow
             {...TransitionProps}
@@ -67,29 +67,14 @@ function LnbMenu(params) {
             <Paper>
               <ClickAwayListener onClickAway={handleCloseLink}>
               <ButtonGroup
-        orientation="vertical"
-        aria-label="Vertical button group"
-        variant="text"
-      >
-        {menu.map(item => {
-                return <Button 
-            size="midieum" key="one">{item.title}</Button> //<li><a href={item.link} target='_blank'>{item.title}</a></li>
-            })}
-      </ButtonGroup>
-                {/* <MenuList id="split-button-menu" autoFocusItem>
-                  {menu.map((option, index) => (
-                    <MenuItem
-                      key={option}
-                      disabled={index === 2}
-                    //   selected={index === selectedIndex}
-                      onClick={(event) => handleClickLink(event, index)}
-                    >
-                      {option.title}
-                    </MenuItem>
-                  ))}
-                </MenuList> */}
-                
-        
+                orientation="vertical"
+                aria-label="Vertical button group"
+                variant="text"
+              >
+                {menu.map((item, idx) => {
+                    return <Button size="midieum" key={item.title} onClick={(e) => handleClickLink(e, idx)}>{item.title}</Button>
+                })}
+              </ButtonGroup>
               </ClickAwayListener>
             </Paper>
           </Grow>

@@ -2,7 +2,7 @@
 .exampleListContainer {
     
     display : inline-flex;
-    gap: 1px;
+    gap: 3px;
 }
 
 .hint
@@ -23,6 +23,7 @@
 
 .exmapleItemBox {
     /* background-color: #b7e1cd; */
+    width: calc(100% ) ;
     border: 1px solid black;
     border-radius: 5px; 
     /* margin-bottom: 3px; */
