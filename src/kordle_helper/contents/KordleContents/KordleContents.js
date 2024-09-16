@@ -100,7 +100,7 @@ function KordleContents({type}) {
     const handleInputWarning = (text, idx) => {
         
         if(text.length > 1) return;
-        if(answerList[idx]) return;
+        // if(answerList[idx]) return;
 
         text = replaceExceptKorean(convertEnglishToKorean(text))
         if(warningList[idx].includes(text)) return;
@@ -160,7 +160,7 @@ function KordleContents({type}) {
     const handleInputNotUse = (text, idx) => {
         
         if(text.length > 1) return;
-        if(answerList[idx]) return;
+        // if(answerList[idx]) return;
 
         text = replaceExceptKorean(convertEnglishToKorean(text))
         if(notUseList[idx].includes(text)) return;
