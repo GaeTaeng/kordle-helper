@@ -8,6 +8,7 @@ function Contents(params) {
     const [type, setType] = useState(GAME_TYPE.KORDLE)
 
     const handleSelect = (e) => {
+        console.log("e : ", e.target)
         setType(e.target.value)
     }
 

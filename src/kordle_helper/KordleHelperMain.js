@@ -16,7 +16,7 @@ function KordleHelperMain(params) {
         <Header isOnHint ={isOnHint} onToggleOnHint={handleToggleOnHint} />
         <LnbMenu />
         <Contents />
-        <Footer />
+        {/* <Footer /> */}
         
 
         </div>) 

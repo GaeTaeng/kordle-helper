@@ -1,20 +1,21 @@
 
 import { GAME_TYPE } from "../Const/kordleConst";
 
-function KordleHeader(params) {
-    const selectList = [
+import { Button, MenuItem, MenuList, ToggleButtonGroup } from "@mui/material";
+function KordleHeader({type, onSelect}) {
+    const buttonList = [
         {value : GAME_TYPE.KORDLE, name : "꼬들"},
         {value : GAME_TYPE.KOOOOOODLE, name : "꼬오오오오들"}
     ]
+    console.log("type : ", type)
     return (
         <div>
-            <select className="gameSelect" onChange={params.onSelect} value={GAME_TYPE[params.type]}>
-                {selectList.map(item => {
-                    return <option value={item.value} key = {item.value}>
-                        {item.name}
-                    </option>
+            <ToggleButtonGroup>
+            {buttonList.map(item => {
+                    return <Button key={item.value} value={item.value} variant={String(type) === String(item.value) ?"contained":"outlined"} size={'small'} onClick={onSelect}>{item.name}</Button>
+                    
                 })}
-            </select>
+            </ToggleButtonGroup>
         </div>
     )
     

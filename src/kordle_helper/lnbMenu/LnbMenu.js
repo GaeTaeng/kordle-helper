@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './LnbMenu.css';
+import { Button, ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper } from '@mui/material';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 function LnbMenu(params) {
+    const anchorRef = useRef(null);
     const menu = [
         {title : "꼬맨틀", link : "https://semantle-ko.newsjel.ly/"},
         {title : "꼬들", link : "https://kordle.kr/"},
@@ -13,18 +16,86 @@ function LnbMenu(params) {
     ]
 
     const [isOpenLinks, setIsOpenLinks] = useState(false);
-    const handleClickLink = () => {
-        setIsOpenLinks(!isOpenLinks);
+    const [selectedIdx, setSelectedIdx] = useState(false);
+    const handleOpenLink = () => {
+        setIsOpenLinks(true);
+    }
+
+    const handleCloseLink = () => {
+        setIsOpenLinks(false);
+    }
+
+    const handleClickLink = (e, idx) => {
+        window.open(menu[idx].link, "_blank")
+        setSelectedIdx(idx)
     }
     return (<nav id="lnb">
-        <h1 onClick={handleClickLink} style={{cursor:"pointer"}}>게임 링크 모음</h1>
-        <ul style={isOpenLinks ? {display:"block"} : {display:"none"}}>
-            {menu.map(item => {
-                return <li><a href={item.link} target='_blank'>{item.title}</a></li>
+        <ButtonGroup
+          variant="contained"
+          ref={anchorRef}
+          aria-label="Button group with a nested menu"
+        >
+          <Button onClick={handleOpenLink}>링크 모음</Button>
+          <Button
+            size="small"
+            aria-controls={isOpenLinks ? 'split-button-menu' : undefined}
+            aria-expanded={isOpenLinks ? 'true' : undefined}
+            aria-label="select merge strategy"
+            aria-haspopup="menu"
+            onClick={handleOpenLink}
+          >
+            <ArrowDropDownIcon />
+          </Button>
+        </ButtonGroup>
+        
+        <Popper
+        sx={{ zIndex: 1 }}
+        open={isOpenLinks}
+        anchorEl={anchorRef.current}
+        role={undefined}
+        transition
+        disablePortal
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin:
+                placement === 'bottom' ? 'center top' : 'center bottom',
+            }}
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleCloseLink}>
+              <ButtonGroup
+        orientation="vertical"
+        aria-label="Vertical button group"
+        variant="text"
+      >
+        {menu.map(item => {
+                return <Button 
+            size="midieum" key="one">{item.title}</Button> //<li><a href={item.link} target='_blank'>{item.title}</a></li>
             })}
-          
-          
-        </ul>
+      </ButtonGroup>
+                {/* <MenuList id="split-button-menu" autoFocusItem>
+                  {menu.map((option, index) => (
+                    <MenuItem
+                      key={option}
+                      disabled={index === 2}
+                    //   selected={index === selectedIndex}
+                      onClick={(event) => handleClickLink(event, index)}
+                    >
+                      {option.title}
+                    </MenuItem>
+                  ))}
+                </MenuList> */}
+                
+        
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+
       </nav>) 
 }
 
