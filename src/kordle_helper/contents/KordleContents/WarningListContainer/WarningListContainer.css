@@ -1,0 +1,52 @@
+
+
+
+
+.warningListContainer {
+    
+    display : inline-flex;
+    /* min-height: 488px; */
+    gap: 1px;
+}
+
+.hint
+.warningListContainer {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+
+.kordle
+.warningListCase {
+    
+}
+
+.kooooodle
+.warningListCase {
+    
+}
+
+.warningItemInput {
+    width: calc(100% - 5px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+.warningItem {
+    width: calc(100% - 1px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    background-color: #f1c232;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+}
+

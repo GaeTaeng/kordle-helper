@@ -1,0 +1,54 @@
+.kordleContents {
+    /* width: 1000px; */
+
+}
+.leftContents {
+    
+    /* float: right; */
+    /* flex: 6; */
+    /* width: 60%; */
+    /* display: inline-block; */
+    margin-left: 50px;
+    float: left;
+    box-sizing: border-box;
+
+}
+.rightContents {
+    float: left;
+    /* flex: 1; */
+    margin-left: 50px;
+    /* width: 20%; */
+    /* display: inline-block; */
+    box-sizing: border-box;
+    
+
+}
+.section {
+    margin-top: 40px;
+}
+
+
+.kordle
+.word {
+    width: 50px;
+}
+.kooooodle
+.word {
+    /* width: 25px; */
+    width: 50px;
+}
+
+.hintText {
+    display: none;
+    font-size: small;
+    font-weight: 900;
+    margin : 10px 0px;
+}
+.hint
+.hintText {
+    display: block;
+    
+}
+
+
+

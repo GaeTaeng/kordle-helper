@@ -2,7 +2,7 @@
 import * as React from 'react';
 import './AnswerInputCase.css'
 
-function AnswerInputCase({answerList, answerInit, onChangeAnswerItem}) {
+function AnswerInputContainer({answerList, answerInit, onChangeAnswerItem}) {
   return (
     <div className="answerInputContainer" >
                         {answerList.map((item, idx) => {
@@ -16,4 +16,4 @@ function AnswerInputCase({answerList, answerInit, onChangeAnswerItem}) {
   );
 };
 
-export default AnswerInputCase;
+export default AnswerInputContainer;

@@ -1,0 +1,39 @@
+
+
+.notUseListContainer {
+    display : inline-flex;
+    gap: 1px;
+}
+.hint
+.notUseListContainer {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+.notUseListCase {
+    
+}
+
+.notUseItemInput {
+    width: calc(100% - 5px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+.notUseItem {
+    width: calc(100% - 1px) ;
+    
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 1000;
+    background-color: grey;
+    border: 0.1px solid black;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+}

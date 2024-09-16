@@ -1,7 +1,7 @@
 import { useState } from "react";
-import KordleContents from "./KordleContents";
-import KordleHeader from "./KordleHeader";
-import {GAME_TYPE} from "./kordleConst"
+import KordleContents from "./KordleContents/KordleContents";
+import KordleHeader from "./KordleHeader/KordleHeader";
+import {GAME_TYPE} from "./Const/kordleConst"
 
 function Contents(params) {
 

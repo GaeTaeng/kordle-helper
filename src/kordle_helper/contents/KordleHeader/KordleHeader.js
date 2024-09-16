@@ -1,5 +1,5 @@
 
-import { GAME_TYPE } from "./kordleConst";
+import { GAME_TYPE } from "../Const/kordleConst";
 
 function KordleHeader(params) {
     const selectList = [

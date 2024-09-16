@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './header/Header';
 import Contents from './contents/Contents';
 import LnbMenu from './lnbMenu/LnbMenu';
+import { Footer } from './Footer';
 
 function KordleHelperMain(params) {
 
@@ -15,6 +16,7 @@ function KordleHelperMain(params) {
         <Header isOnHint ={isOnHint} onToggleOnHint={handleToggleOnHint} />
         <LnbMenu />
         <Contents />
+        <Footer />
         
 
         </div>) 
