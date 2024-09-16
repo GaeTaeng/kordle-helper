@@ -1,0 +1,40 @@
+
+.answerInputContainer {
+    display : inline-flex;
+    
+    gap: 1px;
+}
+
+.hint
+.answerInputContainer {
+
+    padding : 20px;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+.answerInputContainer .answerInputCase {
+    border-radius: 5px; 
+    border: 1px solid #20630b;
+    
+}
+
+.answerInputContainer .answerInputCase .answerInputIdx{
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.answerInputContainer .answerInputCase .answerInput {
+    width: calc(100% - 5px) ;
+    min-height: 40px;
+    /* height:80px; */
+    font-size:25px;
+    font-weight: 900;
+    background-color: #d9ead3;
+    text-align:center;
+}
+
+.answerInput::after {
+    padding-bottom: 100%;
+}

@@ -3,6 +3,7 @@ import "./KordleContents.css"
 
 import { GAME_TYPE } from "./kordleConst";
 import KordleNoticePopup from "./KordleNoticePopup";
+import AnswerInputCase from "./AnswerInputCase";
 const init_1 = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"]
 const init = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ", "ㅏ", "ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ", "ㅜ", "ㅠ", "ㅡ", "ㅣ"];
 const init_empt = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ];
@@ -205,15 +206,7 @@ function KordleContents({type}) {
             <div className="leftContents">
                 <div className="section">
                 <div className="hintText" ><strong>설명 | </strong>문제를 풀면서 발견한 단어(정답)을 적는 칸입니다. 클릭하여 제거할 수 있습니다.</div>    
-                    <div className="answerInputContainer" >
-                        {answerList.map((item, idx) => {
-                            return <div key={`answerInputCase_${idx}` } className="answerInputCase word">
-                                    <div className="answerInputIdx" >{idx}</div>
-                                    <input className="answerInput" id={`answerInput_${idx}`} style={item && item === "" ? {} : {cursor:"pointer"}} pattern="[ㄱ-ㅎ]" onClick={() => answerInit(idx)} onKeyDown={(e, c) => {onChangeAnswerItem(e, c, idx)}} value={item} readOnly={item}/>
-                                </div>
-                        })}
-
-                    </div>
+                    <AnswerInputCase answerList={answerList} answerInit={answerInit} onChangeAnswerItem={onChangeAnswerItem} />
                 </div>
 
 
