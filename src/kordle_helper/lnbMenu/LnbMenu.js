@@ -2,16 +2,16 @@ import React, { useRef, useState } from 'react';
 import './LnbMenu.css';
 import { Button, ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Link } from 'react-router-dom';
+import { GAME_INFO } from '../contents/Const/kordleConst';
 
 function LnbMenu(params) {
     const anchorRef = useRef(null);
     const menu = [
-        {title : "꼬맨틀", link : "https://semantle-ko.newsjel.ly/"},
-        {title : "꼬들", link : "https://kordle.kr/"},
-        {title : "꼬오오오오들", link : "https://koooo.kordle.kr/"},
-        {title : "개탱-티스토리", link : "https://gaetaeng.tistory.com/"},
-        // {title : "[예정](놀자)가위바위보", link : ""},
-        // {title : "[예정](놀자)끝말잇기", link : ""},
+      GAME_INFO.KORDLE,
+      GAME_INFO.KOOOOKORDLE,
+      GAME_INFO.KOMANTLE,
+
         
     ]
 
@@ -72,7 +72,7 @@ function LnbMenu(params) {
                 variant="text"
               >
                 {menu.map((item, idx) => {
-                    return <Button size="midieum" key={item.title} onClick={(e) => handleClickLink(e, idx)}>{item.title}</Button>
+                    return <Link key={`key_${idx}`} to={GAME_INFO.LINK_URL[item]}><Button size="midieum" key={GAME_INFO.TEXT[item]}>{GAME_INFO.TEXT[item]}</Button></Link>
                 })}
               </ButtonGroup>
               </ClickAwayListener>
