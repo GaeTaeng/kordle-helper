@@ -1,8 +1,9 @@
 import { useState } from "react";
 import KordleContents from "./KordleContents/KordleContents";
 import KordleHeader from "./KordleHeader/KordleHeader";
-import {GAME_TYPE} from "./Const/kordleConst"
+import {GAME_INFO, GAME_TYPE} from "./Const/kordleConst"
 import KordleNoticePopup from "./popup/KordleNoticePopup";
+import MetaTag from "../SEOMetaTag";
 
 function Contents(params) {
 
@@ -65,6 +66,9 @@ function Contents(params) {
             <KordleNoticePopup isOpenNotice={isOpenNotice} handleCloseNoticePopup={handleCloseNoticePopup}/>
             <KordleHeader type={type} isOnHint ={isOnHint} onToggleOnHint={handleToggleOnHint}  onSelect = {handleSelect}/>
             <KordleContents type={type}/>
+
+            
+        <MetaTag title={GAME_INFO.TEXT[GAME_INFO.HELP]} description={GAME_INFO.DESCRIPTION[GAME_INFO.HELP]} keywords={GAME_INFO.KEYWORD[GAME_INFO.HELP]}/>
         </div>
     )
 }
