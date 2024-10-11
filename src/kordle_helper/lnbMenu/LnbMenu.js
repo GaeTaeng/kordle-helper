@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './LnbMenu.css';
 import { Button, ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -18,8 +18,12 @@ function LnbMenu(params) {
 
     const [isOpenLinks, setIsOpenLinks] = useState(false);
     const [selectedIdx, setSelectedIdx] = useState(false);
+
+    useEffect(() => {
+      setIsOpenLinks(true)
+    }, [])
     const handleOpenLink = () => {
-        setIsOpenLinks(true);
+        setIsOpenLinks(!isOpenLinks);
     }
 
     const handleCloseLink = () => {
@@ -49,7 +53,9 @@ function LnbMenu(params) {
           </Button>
         </ButtonGroup>
         
+        
         <Popper
+        style={{width:"138px"}}
             sx={{ zIndex: 1 }}
             open={isOpenLinks}
             anchorEl={anchorRef.current}
@@ -66,17 +72,19 @@ function LnbMenu(params) {
             }}
           >
             <Paper>
-              <ClickAwayListener onClickAway={handleCloseLink}>
+              {/* <ClickAwayListener onClickAway={handleCloseLink}> */}
               <ButtonGroup
                 orientation="vertical"
                 aria-label="Vertical button group"
                 variant="text"
               >
-                {menu.map((item, idx) => {
-                    return <Link key={`key_${idx}`} to={GAME_INFO.LINK_URL[item]}><Button size="midieum" key={GAME_INFO.TEXT[item]}>{GAME_INFO.TEXT[item]}</Button></Link>
+                { menu.map((item, idx) => {
+                    return <Link key={`key_${idx}`} to={GAME_INFO.LINK_URL[item]}>
+                    <Button size="midieum" key={GAME_INFO.TEXT[item]}>{GAME_INFO.TEXT[item]}</Button>
+                    </Link>
                 })}
               </ButtonGroup>
-              </ClickAwayListener>
+              {/* </ClickAwayListener> */}
             </Paper>
           </Grow>
         )}
