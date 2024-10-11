@@ -14,6 +14,43 @@ function Contents(params) {
     const handleToggleOnHint = () => {
         setIsOnHint(!isOnHint)
     }
+
+    
+    const handleKeyDownWarningInput = (e, idx) => {
+        
+        switch (e.key) {
+            case "ArrowDown":
+              // Do something for "down arrow" key press.
+              break;
+            case "ArrowUp":
+              // Do something for "up arrow" key press.
+              break;
+            case "ArrowLeft":
+              // Do something for "left arrow" key press.
+              break;
+            case "ArrowRight":
+              // Do something for "right arrow" key press.
+              break;
+            case "Enter":
+                console.log("isOpenNotice : ", isOpenNotice)
+                if(isOpenNotice) handleCloseNoticePopup()
+              // Do something for "enter" or "return" key press.
+              break;
+            case " ":
+              // Do something for "space" key press.
+              break;
+            case "Escape":
+                console.log("isOpenNotice : ", isOpenNotice)
+                if(isOpenNotice) handleCloseNoticePopup()
+              // Do something for "esc" key press.
+              break;
+            default:
+              return; // Quit when this doesn't handle the key event.
+          }
+    
+        }
+
+
     const handleCloseNoticePopup = () => {
         setIsOpenNotice(false);
     }
@@ -24,7 +61,7 @@ function Contents(params) {
     }
 
     return(
-        <div className={`${(type) === (GAME_TYPE.KORDLE) ? "kordle" : "kooooodle"} ${isOnHint  ? 'hint' : ''}`}>
+        <div className={`${(type) === (GAME_TYPE.KORDLE) ? "kordle" : "kooooodle"} ${isOnHint  ? 'hint' : ''}`} onKeyDown={handleKeyDownWarningInput}>
             <KordleNoticePopup isOpenNotice={isOpenNotice} handleCloseNoticePopup={handleCloseNoticePopup}/>
             <KordleHeader type={type} isOnHint ={isOnHint} onToggleOnHint={handleToggleOnHint}  onSelect = {handleSelect}/>
             <KordleContents type={type}/>

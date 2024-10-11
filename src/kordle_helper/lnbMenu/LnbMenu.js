@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './LnbMenu.css';
 import { Button, ButtonGroup, ClickAwayListener, Grow, MenuItem, MenuList, Paper, Popper } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { GAME_INFO } from '../contents/Const/kordleConst';
 
 function LnbMenu(params) {
@@ -19,9 +19,9 @@ function LnbMenu(params) {
     const [isOpenLinks, setIsOpenLinks] = useState(false);
     const [selectedIdx, setSelectedIdx] = useState(false);
 
-    useEffect(() => {
-      setIsOpenLinks(true)
-    }, [])
+    // useEffect(() => {
+    //   setIsOpenLinks(true)
+    // }, [])
     const handleOpenLink = () => {
         setIsOpenLinks(!isOpenLinks);
     }
@@ -79,9 +79,9 @@ function LnbMenu(params) {
                 variant="text"
               >
                 { menu.map((item, idx) => {
-                    return <Link key={`key_${idx}`} to={GAME_INFO.LINK_URL[item]}>
+                    return <NavLink key={`key_${idx}`} to={GAME_INFO.LINK_URL[item]}>
                     <Button size="midieum" key={GAME_INFO.TEXT[item]}>{GAME_INFO.TEXT[item]}</Button>
-                    </Link>
+                    </NavLink>
                 })}
               </ButtonGroup>
               {/* </ClickAwayListener> */}

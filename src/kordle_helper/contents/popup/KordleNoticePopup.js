@@ -3,9 +3,41 @@ import "./KordleNoticePopup.css"
 import "./popup.css"
 function KordleNoticePopup({isOpenNotice, handleCloseNoticePopup}) {
     
+    const handleKeyDownWarningInput = (e, idx) => {
+        
+    switch (e.key) {
+        case "ArrowDown":
+          // Do something for "down arrow" key press.
+          break;
+        case "ArrowUp":
+          // Do something for "up arrow" key press.
+          break;
+        case "ArrowLeft":
+          // Do something for "left arrow" key press.
+          break;
+        case "ArrowRight":
+          // Do something for "right arrow" key press.
+          break;
+        case "Enter":
+            handleCloseNoticePopup()
+          // Do something for "enter" or "return" key press.
+          break;
+        case " ":
+          // Do something for "space" key press.
+          break;
+        case "Escape":
+            handleCloseNoticePopup()
+          // Do something for "esc" key press.
+          break;
+        default:
+          return; // Quit when this doesn't handle the key event.
+      }
+
+    }
+
     return (
-        <div  className="KordleNoticePopup" style={isOpenNotice ? {display:"block"} : {display:"none"}}>
-            {isOpenNotice && <div className="dimmed" />}
+        <div  className="KordleNoticePopup" style={isOpenNotice ? {display:"block"} : {display:"none"}} onKeyDown={handleKeyDownWarningInput}>
+            {isOpenNotice && <div className="dimmed" onKeyDown={handleKeyDownWarningInput} />}
             <dialog className="popup" open={isOpenNotice}>
                 <h1>해당 페이지는 꼬들/꼬오오오오들 문제풀이를 도와주는 헬프 페이지입니다.</h1>
                 <p>꼬들/꼬오오오오들은 한글 버전의 숫자야구게임/아나그램 입니다. </p>
