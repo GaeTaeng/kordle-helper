@@ -13,7 +13,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.26.2",
+    "react-router-sitemap": "^1.2.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.13",
     "web-vitals": "^2.1.4"
@@ -22,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sitemap": "babel-node src/sitemapGenerator.js",
+    "predeploy": "npm run sitemap"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +47,10 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^7.2.4"
+    "ajv": "^7.2.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0"
   }
 }

@@ -2,4 +2,4 @@
 Allow: /
 User-agent: *
 Disallow:
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://www.kordlehelper.com/sitemap.xml
