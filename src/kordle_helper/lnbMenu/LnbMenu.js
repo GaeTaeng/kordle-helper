@@ -8,6 +8,7 @@ import { GAME_INFO } from '../contents/Const/kordleConst';
 function LnbMenu(params) {
     const anchorRef = useRef(null);
     const menu = [
+      GAME_INFO.HELP,
       GAME_INFO.KORDLE,
       GAME_INFO.KOOOOKORDLE,
       GAME_INFO.KOMANTLE,
