@@ -20,21 +20,21 @@ export const GAME_INFO = {
         kordle : "https://kordle.kr/",
         kooookordle : "https://koooo.kordle.kr/",
         komantle : "https://semantle-ko.newsjel.ly/",
-        ssangn : "https://ssaangn.com/",
+        ssaangn : "https://ssaangn.com/",
     },
     LINK_URL : {
         help : "/help",
         kordle : "/game/kordle",
         kooookordle : "/game/kooookordle",
         komantle : "/game/komantle",
-        ssangn : "/game/ssangn",
+        ssaangn : "/game/ssaangn",
     },
     TEXT : {
         help : "꼬들-도와줘!",
         kordle : "꼬들",
         kooookordle : "꼬오오오오들",
         komantle : "꼬맨틀",
-        ssangn : "쌍근",
+        ssaangn : "쌍근",
     },
     DESCRIPTION : {
         
@@ -42,7 +42,7 @@ export const GAME_INFO = {
         kordle : "한국어 풀어쓰기와 관련된 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근 등 다양한 표현을 즐기며 풀어볼 수 있는 월급루팡 게임 링크 모음 페이지입니다. 재미있는 게임을 통해 한국어의 새로운 매력을 발견해보세요!",
         kooookordle : "한국어 풀어쓰기와 관련된 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근 등 다양한 표현을 즐기며 풀어볼 수 있는 월급루팡 게임 링크 모음 페이지입니다. 재미있는 게임을 통해 한국어의 새로운 매력을 발견해보세요!",
         komantle : "한국어 풀어쓰기와 관련된 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근 등 다양한 표현을 즐기며 풀어볼 수 있는 월급루팡 게임 링크 모음 페이지입니다. 재미있는 게임을 통해 한국어의 새로운 매력을 발견해보세요!",
-        ssangn : "한국어 풀어쓰기와 관련된 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근 등 다양한 표현을 즐기며 풀어볼 수 있는 월급루팡 게임 링크 모음 페이지입니다. 재미있는 게임을 통해 한국어의 새로운 매력을 발견해보세요!",
+        ssaangn : "한국어 풀어쓰기와 관련된 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근 등 다양한 표현을 즐기며 풀어볼 수 있는 월급루팡 게임 링크 모음 페이지입니다. 재미있는 게임을 통해 한국어의 새로운 매력을 발견해보세요!",
     },
     KEYWORD : {
         
@@ -50,7 +50,7 @@ export const GAME_INFO = {
         kordle : "한국어 풀어쓰기, 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근, 월급루팡, 게임 링크 모음, 한국어 게임, 재미있는 게임, 한국어 퍼즐, 게임 추천",
         kooookordle : "한국어 풀어쓰기, 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근, 월급루팡, 게임 링크 모음, 한국어 게임, 재미있는 게임, 한국어 퍼즐, 게임 추천",
         komantle : "한국어 풀어쓰기, 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근, 월급루팡, 게임 링크 모음, 한국어 게임, 재미있는 게임, 한국어 퍼즐, 게임 추천",
-        ssangn : "한국어 풀어쓰기, 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근, 월급루팡, 게임 링크 모음, 한국어 게임, 재미있는 게임, 한국어 퍼즐, 게임 추천",
+        ssaangn : "한국어 풀어쓰기, 꼬들, 꼬오오오오들, 꼬맨틀, 쌍근, 월급루팡, 게임 링크 모음, 한국어 게임, 재미있는 게임, 한국어 퍼즐, 게임 추천",
     }
     // kordle : "",
     // kordle : "",
