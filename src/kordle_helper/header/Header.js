@@ -12,6 +12,7 @@ const menu = [
     GAME_INFO.KORDLE,
     GAME_INFO.KOOOOKORDLE,
     GAME_INFO.KOMANTLE,
+    GAME_INFO.SSAANGN,
 
       
   ]
