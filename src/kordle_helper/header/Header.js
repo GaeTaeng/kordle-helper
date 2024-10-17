@@ -2,7 +2,7 @@
 
 import { Button, ButtonGroup, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { GAME_INFO } from '../contents/Const/kordleConst';
+import { GAME_INFO, LINK_TYPE } from '../contents/Const/kordleConst';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
@@ -39,7 +39,8 @@ function Header({urltype}) {
                 
                 {<ToggleButtonGroup value={type}  exclusive onChange={handleSelectedGameType}  size={'small'} color="success">
                     {menu.map(item => {
-                        return <Link key={`key_${item}`} to={GAME_INFO.LINK_URL[item]}><ToggleButton  key={item} value={item}>{GAME_INFO.TEXT[item]}</ToggleButton></Link>
+                        return GAME_INFO.LINK_TYPE[item] === LINK_TYPE.IFRAME ? <Link key={`key_${item}`} to={GAME_INFO.LINK_URL[item]}><ToggleButton  key={item} value={item}>{GAME_INFO.TEXT[item]}</ToggleButton></Link>
+                        : <ToggleButton  key={item} value={item} onClick={() => {window.open(GAME_INFO.GAME_URL[item])}}>{GAME_INFO.TEXT[item]}</ToggleButton>
                     })}
                     </ToggleButtonGroup>}
                     <br /><br />

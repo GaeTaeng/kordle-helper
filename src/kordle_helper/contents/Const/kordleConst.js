@@ -7,6 +7,10 @@ export const GAME_TYPE = {
         "1" : "꼬오오오오들",
     }
 }
+export const LINK_TYPE = {
+    IFRAME : 0,
+    REDIRECT : 1,
+}
 
 
 export const GAME_INFO = {
@@ -15,6 +19,14 @@ export const GAME_INFO = {
     KOOOOKORDLE : "kooookordle",
     KOMANTLE : "komantle",
     SSAANGN: "ssaangn",
+    LINK_TYPE : {
+        help : LINK_TYPE.IFRAME,
+        kordle : LINK_TYPE.IFRAME,
+        kooookordle : LINK_TYPE.IFRAME,
+        komantle : LINK_TYPE.IFRAME,
+        ssaangn : LINK_TYPE.REDIRECT,
+
+    },
     GAME_URL : {
         help : "",
         kordle : "https://kordle.kr/",
