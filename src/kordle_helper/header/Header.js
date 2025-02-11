@@ -1,10 +1,9 @@
 
 
-import { Button, ButtonGroup, ToggleButton, ToggleButtonGroup } from '@mui/material';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Button, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { GAME_INFO, LINK_TYPE } from '../contents/Const/kordleConst';
-import { Link, useParams } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
 
 
 const menu = [
@@ -30,7 +29,7 @@ function Header({urltype}) {
         setIsOpenLinks(!isOpenLinks);
     }
     return (
-        <header style={{marginTop:"20px"}}>
+        <header style={{marginTop:"20px", textAlign:"center"}}>
             <div style={isOpenLinks ? {display:"block"} : {display:"none"}}>
                 문의사항 : nuckly60@gmail.com / <a href="https://open.kakao.com/o/gdYCzqOg"  target='_blank'>카카오톡</a>
                 

@@ -6,9 +6,11 @@ import Contents from './contents/Contents';
 import GamePage from './gamePage/GamePage';
 import Header from './header/Header';
 
+import "./KordleHelperMain.css"
+
 function KordleHelperMain(params) {
 
-    return (<div className={`KordleHelperMain`}>
+    return (<div className="KordleHelperMain">
             <BrowserRouter>
                 <HelmetProvider>
                     <Helmet>
